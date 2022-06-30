@@ -12,5 +12,5 @@ yarn tsc --init ### iniciar configurações do typescript
 ### Demo
 
 <p align="center">
-  <img src="https://github.com/miroswd/chat/blob/master/assets/demo.git" width="200px" />
+  <img src="https://github.com/miroswd/chat/blob/master/assets/demo.gif" width="300px" />
 </p>
