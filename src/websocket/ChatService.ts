@@ -93,8 +93,6 @@ io.on("connect", socket => {
       roomId: data.idChatRoom
     });
 
-    console.log({real:data})
-
     io.to(data.idChatRoom).emit("message", {
       message, user
     }) // enviando pra todos os usuários conectados globalmente (usuários da sala)

@@ -65,7 +65,10 @@ const addUser = (user) => {
 const addMessage = data => {
   const divMessageUser = document.getElementById("message_user");
 
-  divMessageUser.innerHTML += `
+  const existsMessage = document.getElementById(data.message._id)
+
+  if (!existsMessage) {
+    divMessageUser.innerHTML += `
    <span class="user_name user_name_date">
               <img
                 class="img_user"
@@ -75,9 +78,10 @@ const addMessage = data => {
               <span>${dayjs(data.message.created_at).format("HH:mm")}</span></span
             > 
             <div class="messages">
-              <span class="chat_message">${data.message.text}</span>
+              <span class="chat_message" id="${data.message._id}">${data.message.text}</span>
             </div>
    `
+  }
 }
 
 document.getElementById("users_list").addEventListener("click", e => {
