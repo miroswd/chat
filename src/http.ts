@@ -19,7 +19,7 @@ const io = new Server(server);
  * io -> conexão global, todo cliente que se conectar na aplicação
  * vai passar por esse io
  * 
- * esse io em específico é a inicialização, mas como estamos exportando, podemos recoperar
+ * esse io em específico é a inicialização, mas como estamos exportando, podemos recuperar
  * o parâmetro em outra chamada de io, mas utilizando o connect
  */
 io.on("connection", (socket) => {
